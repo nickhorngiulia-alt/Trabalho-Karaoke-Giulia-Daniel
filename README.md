@@ -5,8 +5,8 @@
 **Unidade:** 2 — Programação de Back-end  
 **Professor:** Elder Francisco Fontana Bernardi  
 **Modalidade:** Dupla  
-**Valor:** a definir  
-**Prazo:** a definir
+**Valor:** 2 pontos  
+**Prazo:** 17/06
 
 ## Contexto
 

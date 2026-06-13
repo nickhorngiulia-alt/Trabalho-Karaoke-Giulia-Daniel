@@ -3,6 +3,7 @@
 const { sleep } = require('./utils');
 const { Musica } = require('./musica');
 const { Parte } = require('./parte');
+const chalk = require('chalk');
 
 
 const boompala = new Musica('BOOMPALA', 'LE SSERAFIM');
@@ -114,10 +115,10 @@ boompala.addParte(
 )
 
 boompala.addParte(
-    new Parte (boompala2, 5000, 'verso')
+    new Parte (boompala2, 5000, 'refrao')
 )
 boompala.addParte(
-    new Parte (everythingsEmpty, 4000, 'verso')
+    new Parte (everythingsEmpty, 4000, 'refrao')
 )
 
 estrofeOnMyChest();
@@ -144,7 +145,15 @@ async function play() {
         for (const parte of boompala.partes) {
             //imprime parte e letra
             console.log( " -- --" );
-            console.log( "> " + parte.letra );
+            if (parte.tag == 'verso') {
+                console.log(chalk.italic.white("> " + parte.letra));
+            } if (parte.tag == 'refrao') {
+                console.log(chalk.yellow.bold("> " + parte.letra));
+                } if (parte.tag == 'refrao1') {
+                    console.log(chalk.cyan.bold("> " + parte.letra));
+                    } if (parte.tag == 'refrao2') {
+                        console.log(chalk.blueBright.bold("> " + parte.letra));
+                        }
             //agurda o tempo para a letra
             await sleep( parte.tempoEspera );
         }

@@ -35,13 +35,12 @@ function estrofeMacarena(){
         new Parte(macarena1, 6000, 'verso')
     );
     boompala.addParte(
-        new Parte(macarena2, 6000, 'verso')
+        new Parte(macarena2, 9000, 'verso')
     );
 }
 estrofeMacarena();
-// silêncio de 3s
 boompala.addParte(
-    new Parte (sserafimBaby, 8000, 'verso')
+    new Parte (sserafimBaby, 5000, 'verso')
 )
 function parteBoompala(){
     boompala.addParte(
@@ -108,17 +107,17 @@ boompala.addParte(
     )
 
 boompala.addParte(
-    new Parte (boompala2, 5000, 'verso')
+    new Parte (boompala2, 5000, 'refrao')
 )
 boompala.addParte(
-    new Parte (everythingsWater, 4000, 'verso')
+    new Parte (everythingsWater, 4000, 'refrao1')
 )
 
 boompala.addParte(
     new Parte (boompala2, 5000, 'refrao')
 )
 boompala.addParte(
-    new Parte (everythingsEmpty, 4000, 'refrao')
+    new Parte (everythingsEmpty, 4000, 'refrao2')
 )
 
 estrofeOnMyChest();
@@ -139,6 +138,16 @@ estrofeMacarena2();
 
 
 async function play() {
+    console.log('\n  ♫  Abra a música no YouTube e prepare-se...\n');
+    console.log('  Pressione ENTER e dê play na música!');
+
+    // Espera 5 segundos para dar tempo de iniciar a música
+    for (let i = 5; i >= 1; i--) {
+        console.log('  ♪  ' + i + '...');
+        await sleep(1000);
+    }
+
+    console.log('  ♫  Tocando!\n');
     try {
         // para cada parte da música, deve imprimir qual parte é, letra e pausar o tempo necessário
         //ex.:

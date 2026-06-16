@@ -1,14 +1,17 @@
-//este é meu arquivo principal
+/* Serviço web com o framework Express.js
+*
+* Deve servir opções para requisições de Musica e partes dela
+ */
+//GET musica/letra
 
-const calc = require('./calc'); //importacao do modulo
-const chalk = require('chalk');
+//GET musica/parte/:id
 
+const express = require('express');
+const app = express();
 
-console.log(chalk.redBright('Este é o meu primeiro programa Node.js'));
-
-const resSoma= calc.soma(2,2);
-const resSub= calc.sub(10,2);
-
-
-console.log(chalk.green( `O resultado da soma é ${resSoma}`) );
-console.log(chalk.blue.bgRed.bold(`O resultado da subtração é ${resSub}`) );  
+app.get('/', function(req,res){
+    const html = "<html> <body> <b> 'Hello Turma de Terça' </b> </body> </html>"
+    res.contentType("text/html");
+    res.send(html)
+})
+app.listen(3001);

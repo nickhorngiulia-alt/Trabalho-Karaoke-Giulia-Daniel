@@ -6,7 +6,7 @@ const { Parte } = require('./parte');
 const chalk = require('chalk');
 
 
-const musica = new Musica('BOOMPALA', 'LE SSERAFIM');
+const boompala = new Musica('BOOMPALA', 'LE SSERAFIM');
 const macarena1 = `Dale a tu cuerpo alegría, Macarena \n Que tu cuerpo es pa' darle alegría y cosa buena`;
 const macarena2 = `Dale a tu cuerpo alegría, Macarena \n Eh, Macarena (¡ay!)`;
 const sserafimBaby = `SSERAFIM, baby \n boompala`;
@@ -172,4 +172,4 @@ async function play() {
 }
 
 
-module.exports = {musica, play};
+module.exports = {boompala, play};
